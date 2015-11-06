@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" text="text/css" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+<table>
+<div id="header">
+<tr>
+	<th>Names</th>
+	<th>Email</th>
+	<th>Age</th>
+</tr>
+</div>
+<div id="data">
+<tr>
+<td>Dummy Names</td>
+<td>dummy@yahoo.com</td>
+<td>19</td>
+</tr>
+<?php
+	$file=fopen("data.txt","r");
+	while(!feof($file)){
+	$line=fgets($file);//read line
+	$data_array=explode("#",$line);
+	$names=$data_array[0];
+	$email=$data_array[1];
+	$age=$data_array[2];
+	echo "<tr>
+		<td>$names</td>
+		<td>$email</td>
+		<td>$age</td>
+		</tr>";
+	}
+?>
+</div>
+</table>
+</div>
+</body>
+</html>

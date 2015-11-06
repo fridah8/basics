@@ -1,0 +1,22 @@
+table{
+border:1px solid #c0c0c0;
+margin:0 auto;
+}
+#wrapper{
+margin:0 auto;
+width:40%;
+}
+th{
+color:#ffffff;
+background-color:#01579b;
+}
+td{
+color:#212121;
+background-color:#e1f5fe;
+}
+tr:nth-child(odd){
+background:#cdcdc1;
+}
+tr:nth-child(even){
+background:#8b8b83;
+}
